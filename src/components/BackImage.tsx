@@ -25,7 +25,7 @@ const BackImage:React.FC<BackImageProps> = ({ children, title, location, icon, s
   }, [src, random]);
 
   return (
-    <div className="back-image">
+    <div className={"back-image " + (!title ? "back-image-small" : "")}>
       {location && 
         <div className='location'>
             <i className={'fa-regular fa-' + icon}></i>

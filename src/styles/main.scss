@@ -79,6 +79,49 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.0rem;
+
+  .about-me {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .pic {
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+
+      --size: 10rem;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      
+      .name {
+        display: flex;
+        align-items: end;
+        gap: 1.0rem;
+
+        h1 {
+          font: 700 1.8rem var(--font-1);
+          margin: 0;
+        }
+        .title {
+          opacity: 0.5;
+          font: 500 1.0rem var(--font-1);
+          margin-bottom: 0.3rem;
+        }
+      }
+      p {
+        font: 500 1.8rem var(--font-1);
+        opacity: 0.8;
+        margin: 0;
+      }
+    }
+  }
 }
 .back-image {
   width: 100%;
@@ -94,6 +137,14 @@ main {
   gap: 0.2rem;
   overflow: hidden;
 
+  &.back-image-small {
+    min-height: 0;
+    padding: 0.8rem 2.0rem;
+
+    .location {
+      margin-top: 0;
+    }
+  }
   h1, p {
     margin: 0;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -132,5 +183,11 @@ main {
   }
 }
 .contributions-container {
-  width: var(--max-width);
+  width: 36rem;
+  max-width: var(--max-width);
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
 }
