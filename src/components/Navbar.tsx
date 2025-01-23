@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className='nav-main'>
       <div className="group group-user">
-        <img src="https://unsplash.it/1920/1080" alt="Profile picture" className="pic" />
+        <img src="/images/profile-pic.png" alt="Profile picture" className="pic" />
         <div className="text">
           <span className="name">Lukáš Merta</span>
           <span className="title">Fullstack developer</span>
