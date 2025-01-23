@@ -11,8 +11,8 @@ interface NavbarLinkProps {
 }
 
 const NavbarLink:React.FC<NavbarLinkProps> = ({ children, to, openBlank, iconType, icon, active }) => {
-  if (!iconType) iconType = 'regular';
-  //if (active) iconType = 'regular';
+  if (!iconType) iconType = 'light';
+  //if (active) iconType = '';
 
   return (
     <Link 

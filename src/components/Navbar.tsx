@@ -14,11 +14,15 @@ const Navbar = () => {
       </div>
       <div className="group">
         <NavbarLink to='/' icon='compass' active={true}>Prozkoumat</NavbarLink>
-        <NavbarLink to='/' icon='house'>Jinam</NavbarLink>
+        <NavbarLink to='/' icon='diagram-project'>Projekty</NavbarLink>
+        <NavbarLink to='/' icon='microchip'>Technologie</NavbarLink>
+        <NavbarLink to='/' icon='pen-line'>Blog</NavbarLink>
+        <NavbarLink to='/' icon='briefcase'>Zkušenosti</NavbarLink>
       </div>
       <div className="group">
         <span className="group-title">Social</span>
         <NavbarLink to='https://github.com/l-merta' openBlank={true} iconType='brands' icon='github'>GitHub</NavbarLink>
+        <NavbarLink to='/' icon='file-spreadsheet'>Životopis</NavbarLink>
       </div>
     </nav>
   )
