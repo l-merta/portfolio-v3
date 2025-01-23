@@ -1,0 +1,26 @@
+:root {
+  --font-color-d-1: whitesmoke;
+  --bg-color-d-1: #161616;
+  --bg-color-d-2: #1C1C1C;
+  --bg-color-d-3: #2B2B2B;
+  --bg-color-d-4: #303030;
+
+  --font-1: 'Poppins';
+
+  --nav-main-width: 15rem;
+}
+body {
+  color: var(--font-color-1);
+  background-color: var(--bg-color-1);
+  font-family: var(--font-1);
+  margin: 0;
+
+  --font-color-1: var(--font-color-d-1);
+  --bg-color-1: var(--bg-color-d-1);
+  --bg-color-2: var(--bg-color-d-2);
+  --bg-color-3: var(--bg-color-d-3);
+  --bg-color-4: var(--bg-color-d-4);
+}
+body * {
+  box-sizing: border-box;
+}
