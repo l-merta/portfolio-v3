@@ -12,6 +12,10 @@ createRoot(document.getElementById('root')!).render(
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Home />} />
+        <Route path='/tech' element={<Home />} />
+        <Route path='/blog' element={<Home />} />
+        <Route path='/experience' element={<Home />} />
       </Routes>
     </Router>
   </StrictMode>,
