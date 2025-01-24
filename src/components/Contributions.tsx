@@ -8,7 +8,10 @@ const Contributions = () => {
 
   return (
     <div className="contributions-container">
-      <GitHubCalendar username="l-merta" theme={theme} />
+      <div className="wrapper">
+        <h3>GitHub příspěvky</h3>
+        <GitHubCalendar username="l-merta" theme={theme} />
+      </div>
     </div>
   );
 }

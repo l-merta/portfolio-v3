@@ -51,20 +51,7 @@
   padding: 0 0.8rem;
 }
 .nav-main .group .nav-link {
-  color: var(--font-color-1);
   width: 100%;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  padding: 0.35rem 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
-  transition: 0.12s;
-}
-.nav-main .group .nav-link:hover, .nav-main .group .nav-link.nav-link-active {
-  background-color: var(--bg-color-3);
-  border-color: var(--bg-color-4);
 }
 
 main {
@@ -88,7 +75,7 @@ main .about-me .pic {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  --size: 10rem;
+  --size: 8rem;
 }
 main .about-me .text {
   display: flex;
@@ -109,9 +96,36 @@ main .about-me .text .name .title {
   margin-bottom: 0.3rem;
 }
 main .about-me .text p {
-  font: 500 1.8rem var(--font-1);
+  font: 500 1.6rem var(--font-1);
   opacity: 0.8;
   margin: 0;
+}
+main .about-me .links {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+main .about-me .links a:hover {
+  scale: 0.95;
+}
+
+.nav-link {
+  color: var(--font-color-1);
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  transition: 0.12s;
+}
+.nav-link:hover, .nav-link.nav-link-active {
+  background-color: var(--bg-color-3);
+  border-color: var(--bg-color-4);
 }
 
 .back-image {
@@ -137,7 +151,7 @@ main .about-me .text p {
 }
 .back-image h1, .back-image p {
   margin: 0;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 .back-image h1 {
   font: 600 3rem var(--font-1);
@@ -175,10 +189,19 @@ main .about-me .text p {
 }
 
 .contributions-container {
-  width: 36rem;
-  max-width: var(--max-width);
+  width: 100%;
+  max-width: 50rem;
+}
+.contributions-container .wrapper {
+  width: 100%;
+  max-width: 36rem;
 }
 .contributions-container svg {
   width: 100%;
   height: auto;
+}
+.contributions-container h3 {
+  opacity: 0.8;
+  font: 500 1rem var(--font-1);
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
