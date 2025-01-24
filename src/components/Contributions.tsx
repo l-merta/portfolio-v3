@@ -1,4 +1,5 @@
 //import React from 'react';
+import { Link } from 'react-router-dom';
 import GitHubCalendar from 'react-github-calendar';
 
 const Contributions = () => {
@@ -9,7 +10,10 @@ const Contributions = () => {
   return (
     <div className="contributions-container">
       <div className="wrapper">
-        <h3>GitHub příspěvky</h3>
+        <div className="text">
+          <h3>GitHub příspěvky</h3>
+          <Link to='https://github.com/l-merta' target='_blank'>l-merta</Link>
+        </div>
         <GitHubCalendar username="l-merta" theme={theme} />
       </div>
     </div>

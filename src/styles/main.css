@@ -196,12 +196,23 @@ main .about-me .links a:hover {
   width: 100%;
   max-width: 36rem;
 }
+.contributions-container .text {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.contributions-container .text h3 {
+  opacity: 0.8;
+  font: 500 1rem var(--font-1);
+  margin: 0;
+}
+.contributions-container .text a {
+  opacity: 0.5;
+  color: var(--font-color-1);
+  font: 500 0.9rem var(--font-1);
+}
 .contributions-container svg {
   width: 100%;
   height: auto;
-}
-.contributions-container h3 {
-  opacity: 0.8;
-  font: 500 1rem var(--font-1);
-  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
