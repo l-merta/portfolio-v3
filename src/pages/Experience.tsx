@@ -8,7 +8,7 @@ function Experience() {
     <>
     <Navbar />
     <main>
-      <BackImage random={true} title='Zkušenosti'>
+      <BackImage random={true} folder={1} title='Zkušenosti' location='Zkušenosti' icon='briefcase'>
         <p>Tohle je moje portfolio, bingu lingu.</p>
       </BackImage>
     </main>

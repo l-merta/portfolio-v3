@@ -61,7 +61,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 main .about-me {
   width: 100%;
@@ -110,24 +110,6 @@ main .about-me .links a:hover {
   scale: 0.95;
 }
 
-.nav-link {
-  color: var(--font-color-1);
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  padding: 0.35rem 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
-  transition: 0.12s;
-}
-.nav-link:hover, .nav-link.nav-link-active {
-  background-color: var(--bg-color-3);
-  border-color: var(--bg-color-4);
-}
-
 .back-image {
   width: 100%;
   max-width: var(--max-width);
@@ -161,8 +143,8 @@ main .about-me .links a:hover {
   font: 400 1rem var(--font-1);
 }
 .back-image .location {
-  opacity: 0.75;
-  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.05);
   font-size: 0.8rem;
   border: 1px solid var(--font-color-1);
   border-radius: 2rem;
@@ -171,8 +153,8 @@ main .about-me .links a:hover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .back-image img {
   width: 100%;
@@ -194,7 +176,7 @@ main .about-me .links a:hover {
 }
 .contributions-container .wrapper {
   width: 100%;
-  max-width: 36rem;
+  max-width: 34rem;
 }
 .contributions-container .text {
   margin-bottom: 0.5rem;
@@ -215,4 +197,105 @@ main .about-me .links a:hover {
 .contributions-container svg {
   width: 100%;
   height: auto;
+}
+
+.projects-small {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.projects-small .section-description {
+  margin-top: -2rem;
+}
+.projects-small .projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.projects-small .projects .project {
+  color: var(--font-color-1);
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.3rem;
+  text-decoration: none;
+  transition: 0.12s;
+  cursor: pointer;
+}
+.projects-small .projects .project img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects-small .projects .project .title {
+  font: 600 1.2rem var(--font-1);
+  margin: 0;
+}
+.projects-small .projects .project .description {
+  opacity: 0.7;
+  font: 400 0.8rem var(--font-1);
+  margin: 0;
+}
+.projects-small .projects .project:hover {
+  scale: 1.05;
+}
+.projects-small .links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+.projects-small .links a {
+  font: 500 0.9rem var(--font-1);
+  color: var(--font-color-1);
+  text-decoration: none;
+  transition: 0.12s;
+}
+.projects-small .links a:hover {
+  scale: 0.95;
+}
+
+.nav-link {
+  color: var(--font-color-1);
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  transition: 0.12s;
+}
+.nav-link:hover, .nav-link.nav-link-active {
+  background-color: var(--bg-color-3);
+  border-color: var(--bg-color-4);
+}
+.nav-link.nav-link-main {
+  background-color: var(--main-color-1);
+  border-color: transparent;
+}
+
+h2 {
+  color: var(--font-color-1);
+  font: 600 2rem var(--font-1);
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0;
+  text-align: center;
+}
+
+.section-description {
+  opacity: 0.8;
+  color: var(--font-color-1);
+  font: 500 0.9rem var(--font-1);
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

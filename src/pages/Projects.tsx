@@ -8,7 +8,7 @@ function Projects() {
     <>
     <Navbar />
     <main>
-      <BackImage random={true} title='Projekty' location='Projekty' icon='diagram-project'>
+      <BackImage random={true} folder={2} title='Projekty' location='Projekty' icon='diagram-project'>
         <p>Tohle je moje portfolio, bingu lingu.</p>
       </BackImage>
     </main>

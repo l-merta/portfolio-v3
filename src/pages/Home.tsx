@@ -4,13 +4,14 @@ import Navbar from './../components/Navbar';
 import NavbarLink from '../components/NavbarLink';
 import BackImage from './../components/BackImage';
 import Contributions from './../components/Contributions';
+import ProjectsSmall from './../components/ProjectsSmall';
 
 function Home() {
   return (
     <>
     <Navbar />
     <main>
-      <BackImage random={true} location='Úvod' icon='compass'></BackImage>
+      <BackImage src='/images/background/gif/group-0/gif-3.gif' location='Úvod' icon='compass'></BackImage>
       <section className='about-me'>
         <img className='pic' src="https://avatars.githubusercontent.com/u/164738919?v=4" alt="GitHub profilový obrázek" />
         <div className="text">
@@ -27,6 +28,7 @@ function Home() {
         </div>
       </section>
       <Contributions />
+      <ProjectsSmall />
     </main>
     </>
   )

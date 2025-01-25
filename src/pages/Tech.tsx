@@ -8,7 +8,7 @@ function Tech() {
     <>
     <Navbar />
     <main>
-      <BackImage random={true} title='Technologie'>
+      <BackImage random={true} folder={1} title='Technologie' location='Technologie' icon='microchip'>
         <p>Tohle je moje portfolio, bingu lingu.</p>
       </BackImage>
     </main>
