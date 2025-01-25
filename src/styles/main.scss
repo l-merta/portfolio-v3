@@ -118,65 +118,6 @@ main {
     }
   }
 }
-.back-image {
-  width: 100%;
-  max-width: var(--max-width);
-  min-height: 12rem;
-  border-radius: 0.8rem;
-  padding: 3.0rem 2.0rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-  overflow: hidden;
-
-  &.back-image-small {
-    min-height: 0;
-    padding: 0.8rem 2.0rem;
-
-    .location {
-      margin-top: 0;
-    }
-  }
-  h1, p {
-    margin: 0;
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  }
-  h1 {
-    font: 600 3.0rem var(--font-1);
-  }
-  p {
-    opacity: 0.8;
-    font: 400 1.0rem var(--font-1);
-  }
-  .location {
-    opacity: 0.9;
-    background-color: rgba(255, 255, 255, 0.05);
-    font-size: 0.8rem;
-    border: 1px solid var(--font-color-1);
-    border-radius: 2rem;
-    margin-top: -1.0rem;
-    padding: 0.5rem 1.0rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    backdrop-filter: blur(5px);
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    z-index: -1;
-  }
-}
 .contributions-container {
   width: 100%;
   max-width: 50rem;
@@ -216,7 +157,7 @@ main {
   gap: 1.6rem;
 
   .section-description {
-    margin-top: -2.0rem;
+    margin-top: -1.5rem;
   }
   .projects {
     display: flex;
@@ -274,6 +215,68 @@ main {
   }
 }
 
+.back-image {
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 12rem;
+  border-radius: 0.8rem;
+  padding: 3.0rem 2.0rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  overflow: hidden;
+
+  &.back-image-small {
+    min-height: 0;
+    padding: 0.8rem 2.0rem;
+
+    .location {
+      margin-top: 0;
+    }
+  }
+  h1, p {
+    margin: 0;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  }
+  h1 {
+    font: 600 2.5rem var(--font-1);
+  }
+  p {
+    opacity: 0.9;
+    width: 100%;
+    max-width: 25rem;
+    font: 400 1.0rem var(--font-1);
+    text-align: center;
+  }
+  .location {
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    border: 1px solid var(--font-color-1);
+    border-radius: 2rem;
+    margin-top: -1.0rem;
+    padding: 0.5rem 1.0rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(5px);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
 .nav-link {
   color: var(--font-color-1);
   width: fit-content;

@@ -8,8 +8,8 @@ function Projects() {
     <>
     <Navbar />
     <main>
-      <BackImage random={true} folder={2} title='Projekty' location='Projekty' icon='diagram-project'>
-        <p>Tohle je moje portfolio, bingu lingu.</p>
+      <BackImage random={true} folder={2} title='Ukázka mojí práce' location='Projekty' icon='diagram-project'>
+        <p>Každý projekt je příležitost tvořit něco smysluplného a užitečného. Od jednoduchých stránek po webové aplikace.</p>
       </BackImage>
     </main>
     </>

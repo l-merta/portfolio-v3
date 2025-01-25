@@ -21,9 +21,10 @@ function Home() {
           </div>
           <p>Zaměřuji se na tvorbu moderních webových aplikací, které jsou funkční a přehledné.</p>
           <div className="links">
-            <NavbarLink to='/projects' icon='diagram-project' active={true}>Projekty</NavbarLink>
-            <NavbarLink to='/blog' icon='pen-line' active={true}>Blog</NavbarLink>
-            <NavbarLink to='/experience' icon='briefcase' active={true}>Zkušenosti</NavbarLink>
+            <NavbarLink to='/projects' icon='diagram-project' active={true} main={false}>Projekty</NavbarLink>
+            {/* <NavbarLink to='/blog' icon='pen-line' active={true}>Blog</NavbarLink> */}
+            <NavbarLink to='/tech' icon='microchip' active={true}>Technologie</NavbarLink>
+            <NavbarLink to='https://github.com/l-merta' openBlank={true} iconType='brands' icon='github' active={true} main={true}>GitHub</NavbarLink>
           </div>
         </div>
       </section>

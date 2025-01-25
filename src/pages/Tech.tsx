@@ -8,8 +8,8 @@ function Tech() {
     <>
     <Navbar />
     <main>
-      <BackImage random={true} folder={1} title='Technologie' location='Technologie' icon='microchip'>
-        <p>Tohle je moje portfolio, bingu lingu.</p>
+      <BackImage random={true} folder={1} title='Moje pracovní nástroje' location='Technologie' icon='microchip'>
+        <p>Používám moderní technologie, které mi umožňují vytvářet rychlé a spolehlivé weby.</p>
       </BackImage>
     </main>
     </>

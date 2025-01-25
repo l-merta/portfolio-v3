@@ -20,7 +20,7 @@ const Navbar = () => {
         <NavbarLink to='/' icon='compass' active={currentPath == '/'}>Prozkoumat</NavbarLink>
         <NavbarLink to='/projects' icon='diagram-project' active={currentPath == '/projects'}>Projekty</NavbarLink>
         <NavbarLink to='/tech' icon='microchip' active={currentPath == '/tech'}>Technologie</NavbarLink>
-        <NavbarLink to='/blog' icon='pen-line' active={currentPath == '/blog'}>Blog</NavbarLink>
+        {/* <NavbarLink to='/blog' icon='pen-line' active={currentPath == '/blog'}>Blog</NavbarLink> */}
         <NavbarLink to='/experience' icon='briefcase' active={currentPath == '/experience'}>Zkušenosti</NavbarLink>
       </div>
       <div className="group">
