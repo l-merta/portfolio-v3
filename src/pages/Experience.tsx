@@ -1,7 +1,7 @@
 //import { useState } from 'react'
 
 import Navbar from '../components/Navbar';
-import BackImage from '../components/BackImage';
+import BackImage from '../sections/BackImage';
 
 function Experience() {
   return (

@@ -2,9 +2,9 @@
 
 import Navbar from './../components/Navbar';
 import NavbarLink from '../components/NavbarLink';
-import BackImage from './../components/BackImage';
-import Contributions from './../components/Contributions';
-import ProjectsSmall from './../components/ProjectsSmall';
+import BackImage from '../sections/BackImage';
+import Contributions from '../sections/Contributions';
+import ProjectsSmall from '../sections/ProjectsSmall';
 
 function Home() {
   return (

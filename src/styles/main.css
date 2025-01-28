@@ -157,7 +157,7 @@ main .about-me .links a:hover {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.projects-small .projects .project {
+.projects-small .projects .project-item-small {
   color: var(--font-color-1);
   width: 12rem;
   display: flex;
@@ -168,23 +168,23 @@ main .about-me .links a:hover {
   transition: 0.12s;
   cursor: pointer;
 }
-.projects-small .projects .project img {
+.projects-small .projects .project-item-small img {
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.projects-small .projects .project .title {
+.projects-small .projects .project-item-small .title {
   font: 600 1.2rem var(--font-1);
   margin: 0;
 }
-.projects-small .projects .project .description {
+.projects-small .projects .project-item-small .description {
   opacity: 0.7;
   font: 400 0.8rem var(--font-1);
   margin: 0;
 }
-.projects-small .projects .project:hover {
+.projects-small .projects .project-item-small:hover {
   scale: 1.05;
 }
 .projects-small .links {
