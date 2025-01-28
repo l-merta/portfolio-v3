@@ -11,7 +11,7 @@ function Home() {
     <>
     <Navbar />
     <main>
-      <BackImage src='/images/background/gif/group-0/gif-3.gif' location='Úvod' icon='compass'></BackImage>
+      <BackImage src='https://admin.mertalukas.cz/api/v1/images/gif/group-0/gif-3' location='Úvod' icon='compass'></BackImage>
       <section className='about-me'>
         <img className='pic' src="https://avatars.githubusercontent.com/u/164738919?v=4" alt="GitHub profilový obrázek" />
         <div className="text">

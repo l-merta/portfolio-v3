@@ -6,28 +6,21 @@ interface BackImageProps {
   location?: string;
   icon?: string;
   src?: string;
-  random?: boolean;
   folder?: number;
+  imageName?: string;
 }
 
-const BackImage:React.FC<BackImageProps> = ({ children, title, location, icon, src, random, folder }) => {
+const BackImage:React.FC<BackImageProps> = ({ children, title, location, icon, src, folder, imageName }) => {
   const [imgSource, setImgSource] = useState<string | undefined>(undefined);
-  const fileInfo = [
-    { folder: 'group-0', count: 8 },
-    { folder: 'group-1', count: 4 },
-    { folder: 'group-2', count: 5 }
-  ]
 
   useEffect(() => {
-    if (random && folder !== undefined) {
-      const randomIndex = Math.floor(Math.random() * fileInfo[folder].count) + 1;
-      console.log(randomIndex);
-      setImgSource(`/images/background/gif/${fileInfo[folder].folder}/gif-${randomIndex}.gif`);
+    if (!src) {
+      setImgSource(`https://admin.mertalukas.cz/api/v1/images/gif/group-${folder}/${imageName ? imageName : ''}`);
     }
     else {
       setImgSource(src);
     }
-  }, [src, random, folder]);
+  }, [src, folder, imageName]);
 
   return (
     <div className={"back-image " + (!title ? "back-image-small" : "")}>
