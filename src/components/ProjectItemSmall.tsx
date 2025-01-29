@@ -22,8 +22,6 @@ interface ProjectDataProps {
 }
 
 const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
-  const testImageSrc = 'https://admin.mertalukas.cz/api/v1/websites/filmino/images';
-
   const [projectData, setProjectData] = useState<ProjectDataProps | null>(null);
 
   useEffect(() => {
@@ -51,7 +49,7 @@ const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
   if (projectData) {
     return (
       <Link to={projectData.link} target='_blank' className='project-item-small'>
-        <img src={testImageSrc} alt="Project photo" />
+        <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images'} alt="Project photo" />
         <span className="title">{projectData.name}</span>
         <p className="description">Tohle je můj projekt, co sem dělal.</p>
       </Link>

@@ -65,7 +65,7 @@ main {
 }
 main .about-me {
   width: 100%;
-  max-width: 50rem;
+  max-width: var(--max-width-2);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -112,7 +112,8 @@ main .about-me .links a:hover {
 
 .contributions-container {
   width: 100%;
-  max-width: 50rem;
+  max-width: var(--max-width-2);
+  margin-top: -1.5rem;
 }
 .contributions-container .wrapper {
   width: 100%;
@@ -139,7 +140,7 @@ main .about-me .links a:hover {
   height: auto;
 }
 
-.projects-small {
+.section {
   width: 100%;
   max-width: var(--max-width);
   display: flex;
@@ -147,9 +148,24 @@ main .about-me .links a:hover {
   align-items: center;
   gap: 1.6rem;
 }
-.projects-small .section-description {
+.section .section-description {
   margin-top: -1.5rem;
 }
+.section .links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+.section .links a {
+  font: 500 0.9rem var(--font-1);
+  color: var(--font-color-1);
+  text-decoration: none;
+  transition: 0.12s;
+}
+.section .links a:hover {
+  scale: 0.95;
+}
+
 .projects-small .projects {
   display: flex;
   justify-content: center;
@@ -187,19 +203,66 @@ main .about-me .links a:hover {
 .projects-small .projects .project-item-small:hover {
   scale: 1.05;
 }
-.projects-small .links {
+
+.tech-stack-small {
+  width: 100%;
+  max-width: var(--max-width-2);
+  border: 2px solid var(--bg-color-3);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1.4rem;
+}
+.tech-stack-small h2 {
+  text-align: start;
+}
+.tech-stack-small .tech-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+}
+.tech-stack-small .tech-cont .tech-item-small {
+  display: flex;
+  align-items: center;
   gap: 0.8rem;
-  margin-top: 0.5rem;
 }
-.projects-small .links a {
-  font: 500 0.9rem var(--font-1);
-  color: var(--font-color-1);
-  text-decoration: none;
-  transition: 0.12s;
+.tech-stack-small .tech-cont .tech-item-small .img-cont {
+  aspect-ratio: 1/1;
+  width: 2.6rem;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.projects-small .links a:hover {
-  scale: 0.95;
+.tech-stack-small .tech-cont .tech-item-small .img-cont img {
+  width: 1.5rem;
+}
+.tech-stack-small .tech-cont .tech-item-small .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0rem;
+}
+.tech-stack-small .tech-cont .tech-item-small .text .name {
+  font: 400 0.9rem var(--font-1);
+}
+.tech-stack-small .tech-cont .tech-item-small .text .description {
+  opacity: 0.7;
+  font: 400 0.8rem var(--font-1);
+}
+.tech-stack-small .links {
+  width: 100%;
+}
+.tech-stack-small .links a {
+  width: 100%;
+  justify-content: center;
 }
 
 .back-image {

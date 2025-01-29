@@ -1,10 +1,11 @@
 //import { useState } from 'react'
 
 import Navbar from './../components/Navbar';
-import NavbarLink from '../components/NavbarLink';
-import BackImage from '../sections/BackImage';
-import Contributions from '../sections/Contributions';
-import ProjectsSmall from '../sections/ProjectsSmall';
+import NavbarLink from './../components/NavbarLink';
+import BackImage from './../sections/BackImage';
+import Contributions from './../sections/Contributions';
+import ProjectsSmall from './../sections/ProjectsSmall';
+import TechStackSmall from './../sections/TechStackSmall';
 
 function Home() {
   return (
@@ -30,6 +31,7 @@ function Home() {
       </section>
       <Contributions />
       <ProjectsSmall />
+      <TechStackSmall />
     </main>
     </>
   )
