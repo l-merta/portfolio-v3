@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Navbar from '../components/Navbar';
-import BackImage from '../sections/BackImage';
+import Navbar from './../components/Navbar';
+import NavbarLink from './../components/NavbarLink';
 
 interface ProjectDataProps {
   name: string;
   file_name: string;
   link: string;
+  tech: Array<String>;
+  repo_name: string;
   subdomain: string;
   port: number;
   dir: string;
@@ -47,11 +49,27 @@ function ProjectPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <BackImage folder={2} title={projectData?.name} location='Projekt' icon='diagram-project'></BackImage>
+      <main className='project-main'>
         {projectData ? (
-          <div>
+          <>
+          <div className="background-wrapper">
+            <img className="background" src={"https://admin.mertalukas.cz/api/v1/websites/" + projectData.file_name + "/images/1"} alt="Project background image" />
           </div>
+          <div className="project-info">
+            <div className="icon-wrapper">
+              <img className='icon' src={"https://admin.mertalukas.cz/api/v1/websites/" + projectData.file_name + "/images/"} alt="" />
+            </div>
+            <div className="text">
+              <h1>{projectData.name}</h1>
+              <div className="s1">
+                <NavbarLink to={projectData.link} openBlank={true} active={true}>{projectData.link}</NavbarLink>
+                {projectData.repo_name && 
+                  <NavbarLink to={'https://github.com/l-merta/' + projectData.repo_name} openBlank={true} iconType='brands' icon='github' active={true} main={true}>{'l-merta/' + projectData.repo_name}</NavbarLink>
+                }
+              </div>
+            </div>
+          </div>
+          </>
         ) : 'Loading...'}
       </main>
     </>

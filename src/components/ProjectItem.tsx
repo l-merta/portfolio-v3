@@ -10,7 +10,11 @@ interface ProjectProps {
 interface ProjectDataProps {
   name: string;
   file_name: string;
+  description: string;
+  description_short: string;
   link: string;
+  tech: Array<String>;
+  repo_name: string;
   subdomain: string;
   port: number;
   dir: string;
@@ -49,19 +53,18 @@ const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
   }, [dataSrc, data]);
 
   if (projectData) {
-    console.log(projectData);
-
     return (
       <Link to={'/projects/' + projectData.file_name} className='project-item'>
         <div className="img-cont">
           <img src='https://admin.mertalukas.cz/api/v1/images/grad' alt="Gradient background photo" className='background' />
-          <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images/'} alt="Gradient background photo" className='main' />
+          <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images/2'} alt="Project background photo" className='main' />
         </div>
         <span className="title">{projectData.name}</span>
-        <p className="description">Tohle je můj projekt, co sem dělal.</p>
+        <p className="description">{projectData.description_short}</p>
         <div className="tech">
-          <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/react' useText={false} />
-          <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/docker' useText={false} />
+          {projectData.tech && projectData.tech.map((tech, index) => (
+            <TechItemSmall key={index} dataSrc={'https://admin.mertalukas.cz/api/v1/tech/' + tech} useText={false} />
+          ))}
         </div>
       </Link>
     )

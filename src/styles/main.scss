@@ -57,6 +57,66 @@
     }
   }
 }
+.project-main {
+  .background-wrapper {
+    background-color: var(--bg-color-3);
+    width: 100%;
+    max-width: var(--max-width);
+    height: 15rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    margin-top: -1.5rem;
+    overflow: hidden;
+    
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .project-info {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-top: -3.0rem;
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+
+    .icon-wrapper {
+      padding-left: 3vw;
+      position: relative;
+      top: -2.0rem;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      img {
+        width: 14rem;
+        height: auto;
+        border: 6px solid var(--bg-color-1);
+        border-radius: 0.8rem;
+      }
+    }
+    .text {
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 0.5rem;
+
+      h1 {
+        font: 600 2.6rem var(--font-1);
+        margin: 0;
+      }
+      .s1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
 main {
   width: calc(100% - var(--nav-main-width));
   margin-left: var(--nav-main-width);
@@ -221,6 +281,26 @@ main {
   width: 100%;
   max-width: var(--max-width);
 
+  .description-wrapper {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 1.0rem;
+    border: 2px solid var(--bg-color-3);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+
+    h2 {
+      margin: 0;
+      text-align: start;
+    }
+    p {
+      margin: 0;
+      text-align: start;
+    }
+  }
   .projects-cont {
     display: flex;
     flex-wrap: wrap;
@@ -237,8 +317,16 @@ main {
       flex-direction: column;
       gap: 0.3rem;
       text-decoration: none;
+      transition: .12s;
       overflow: hidden;
 
+      &:hover {
+        scale: 0.98;
+
+        .img-cont .main {
+          --size: 100%;
+        }
+      }
       .img-cont {
         width: 100%;
         aspect-ratio: 14/9;
@@ -257,10 +345,12 @@ main {
           filter: grayscale(90%);
         }
         .main {
-          width: 70%;
-          height: 70%;
+          --size: 75%;
+          width: var(--size);
+          height: var(--size);
           border-radius: 0.3rem;
           position: absolute;
+          transition: .12s;
         }
       }
       .title {
@@ -277,6 +367,7 @@ main {
       }
       .tech {
         width: 100%;
+        margin-top: 0.5rem;
         padding: 0 0.8rem;
         padding-bottom: 0.8rem;
         display: flex;
