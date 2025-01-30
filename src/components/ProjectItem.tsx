@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import TechItemSmall from './TechItemSmall';
+
 interface ProjectProps {
   dataSrc?: string;
   data?: ProjectDataProps;
@@ -47,11 +49,20 @@ const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
   }, [dataSrc, data]);
 
   if (projectData) {
+    console.log(projectData);
+
     return (
-      <Link to={'/projects/' + projectData.file_name} className='project-item-small'>
-        <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images'} alt="Project photo" />
+      <Link to={projectData.link} target='_blank' className='project-item'>
+        <div className="img-cont">
+          <img src='https://admin.mertalukas.cz/api/v1/images/grad' alt="Gradient background photo" className='background' />
+          <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images/'} alt="Gradient background photo" className='main' />
+        </div>
         <span className="title">{projectData.name}</span>
         <p className="description">Tohle je můj projekt, co sem dělal.</p>
+        <div className="tech">
+          <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/react' useText={false} />
+          <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/docker' useText={false} />
+        </div>
       </Link>
     )
   }

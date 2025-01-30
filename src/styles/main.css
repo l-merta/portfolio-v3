@@ -166,16 +166,16 @@ main .about-me .links a:hover {
   scale: 0.95;
 }
 
-.projects-small .projects {
+.projects-small .projects-cont {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.projects-small .projects .project-item-small {
+.projects-small .projects-cont .project-item-small {
   color: var(--font-color-1);
-  width: 12rem;
+  width: 10rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -184,24 +184,100 @@ main .about-me .links a:hover {
   transition: 0.12s;
   cursor: pointer;
 }
-.projects-small .projects .project-item-small img {
+.projects-small .projects-cont .project-item-small img {
   aspect-ratio: 1/1;
   width: 100%;
   border-radius: 0.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.projects-small .projects .project-item-small .title {
+.projects-small .projects-cont .project-item-small .title {
   font: 600 1.2rem var(--font-1);
   margin: 0;
 }
-.projects-small .projects .project-item-small .description {
+.projects-small .projects-cont .project-item-small .description {
   opacity: 0.7;
   font: 400 0.8rem var(--font-1);
   margin: 0;
 }
-.projects-small .projects .project-item-small:hover {
+.projects-small .projects-cont .project-item-small:hover {
   scale: 1.05;
+}
+
+.projects {
+  width: 100%;
+  max-width: var(--max-width);
+}
+.projects .projects-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.projects .projects-cont .project-item {
+  color: var(--font-color-1);
+  background-color: var(--bg-color-2);
+  width: 26rem;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+.projects .projects-cont .project-item .img-cont {
+  width: 100%;
+  aspect-ratio: 14/9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.projects .projects-cont .project-item .img-cont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .projects-cont .project-item .img-cont .main {
+  width: 70%;
+  height: 70%;
+  border-radius: 0.5rem;
+  position: absolute;
+}
+.projects .projects-cont .project-item .title {
+  font: 600 1.4rem var(--font-1);
+  margin: 0;
+  margin-top: 0.2rem;
+  padding: 0 0.8rem;
+}
+.projects .projects-cont .project-item .description {
+  opacity: 0.7;
+  font: 400 0.9rem var(--font-1);
+  margin: 0;
+  padding: 0 0.8rem;
+}
+.projects .projects-cont .project-item .tech {
+  width: 100%;
+  padding: 0 0.8rem;
+  padding-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.projects .projects-cont .project-item .tech .tech-item-small {
+  aspect-ratio: 1/1;
+  height: 3rem;
+  width: 3rem;
+}
+.projects .projects-cont .project-item .tech .tech-item-small img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .tech-stack-small {
@@ -225,37 +301,6 @@ main .about-me .links a:hover {
   align-items: start;
   justify-content: start;
   gap: 1rem;
-}
-.tech-stack-small .tech-cont .tech-item-small {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-.tech-stack-small .tech-cont .tech-item-small .img-cont {
-  aspect-ratio: 1/1;
-  width: 2.6rem;
-  border: 1px solid var(--bg-color-3);
-  border-radius: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.tech-stack-small .tech-cont .tech-item-small .img-cont img {
-  width: 1.5rem;
-}
-.tech-stack-small .tech-cont .tech-item-small .text {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 0rem;
-}
-.tech-stack-small .tech-cont .tech-item-small .text .name {
-  font: 400 0.9rem var(--font-1);
-}
-.tech-stack-small .tech-cont .tech-item-small .text .description {
-  opacity: 0.7;
-  font: 400 0.8rem var(--font-1);
 }
 .tech-stack-small .links {
   width: 100%;
@@ -364,4 +409,37 @@ h2 {
   color: var(--font-color-1);
   font: 500 0.9rem var(--font-1);
   margin: 0;
+}
+
+.tech-item-small {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.tech-item-small .img-cont {
+  aspect-ratio: 1/1;
+  height: 100%;
+  max-height: 2.8rem;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tech-item-small .img-cont img {
+  height: 60%;
+}
+.tech-item-small .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0rem;
+}
+.tech-item-small .text .name {
+  font: 400 0.9rem var(--font-1);
+}
+.tech-item-small .text .description {
+  opacity: 0.7;
+  font: 400 0.8rem var(--font-1);
 }/*# sourceMappingURL=main.css.map */

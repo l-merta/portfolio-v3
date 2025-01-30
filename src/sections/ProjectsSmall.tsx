@@ -8,7 +8,7 @@ const ProjectsSmall = () => {
     <section className="section projects-small">
       <h2>Projekty</h2>
       <p className='section-description'>Některé z mých nejnovějších projektů</p>
-      <div className="projects">
+      <div className="projects-cont">
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/filmino'/>
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/kahoot'/>
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/tda'/>

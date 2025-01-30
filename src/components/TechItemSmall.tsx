@@ -4,16 +4,18 @@ import { useState, useEffect } from 'react';
 interface TechProps {
   dataSrc?: string;
   data?: TechDataProps;
+  useText?: boolean;
 }
 interface TechDataProps {
   name: string;
   file_name: string;
+  description: string;
   started: string;
   created_at: string;
   updated_at: string;
 }
 
-const ProjectItemSmall:React.FC<TechProps> = ({ dataSrc, data }) => {
+const ProjectItemSmall:React.FC<TechProps> = ({ dataSrc, data, useText = true }) => {
   const [techData, setTechData] = useState<TechDataProps | null>(null);
 
   useEffect(() => {
@@ -44,10 +46,12 @@ const ProjectItemSmall:React.FC<TechProps> = ({ dataSrc, data }) => {
         <div className="img-cont">
           <img src={'https://admin.mertalukas.cz/api/v1/tech/' + techData.file_name + '/images'} alt="Tech foto" />
         </div>
-        <div className="text">
-          <span className="name">{techData.name}</span>
-          <span className="description">Tech kterej používám</span>
-        </div>
+        {useText &&
+          <div className="text">
+            <span className="name">{techData.name}</span>
+            <span className="description">{techData.description}</span>
+          </div>
+        }
       </div>
     )
   }

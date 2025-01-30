@@ -12,7 +12,7 @@ const TechStackSmall = () => {
       </div>
       <div className="tech-cont">
         <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/react' />
-        <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/ts' />
+        <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/node' />
         <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/docker' />
       </div>
       <div className="links">
