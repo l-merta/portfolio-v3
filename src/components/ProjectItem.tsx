@@ -52,7 +52,7 @@ const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
     console.log(projectData);
 
     return (
-      <Link to={projectData.link} target='_blank' className='project-item'>
+      <Link to={'/projects/' + projectData.file_name} className='project-item'>
         <div className="img-cont">
           <img src='https://admin.mertalukas.cz/api/v1/images/grad' alt="Gradient background photo" className='background' />
           <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images/'} alt="Gradient background photo" className='main' />

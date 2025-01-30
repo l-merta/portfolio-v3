@@ -230,7 +230,7 @@ main {
     .project-item {
       color: var(--font-color-1);
       background-color: var(--bg-color-2);
-      width: 26rem;
+      width: 28rem;
       border: 1px solid var(--bg-color-3);
       border-radius: 0.8rem;
       display: flex;
@@ -253,10 +253,13 @@ main {
           height: 100%;
           object-fit: cover;
         }
+        .background {
+          filter: grayscale(90%);
+        }
         .main {
           width: 70%;
           height: 70%;
-          border-radius: 0.5rem;
+          border-radius: 0.3rem;
           position: absolute;
         }
       }
