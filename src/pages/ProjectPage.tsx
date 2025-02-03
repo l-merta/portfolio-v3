@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from './../components/Navbar';
 import NavbarLink from './../components/NavbarLink';
 import TechItemSmall from './../components/TechItemSmall';
+import Readme from './../components/Readme';
 
 interface ProjectDataProps {
   name: string;
@@ -71,13 +72,14 @@ function ProjectPage() {
                 }
               </div>
               <div className="tech">
-                {projectData.tech.map((tech, index) => (
+                {projectData.tech.map((tech) => (
                   <TechItemSmall dataSrc={'https://admin.mertalukas.cz/api/v1/tech/' + tech} sizeClass='medium' />
                 ))}
               </div>
               <p className='description'>{projectData.description}</p>
             </div>
           </div>
+          <Readme repo={projectData.repo_name} />
           </>
         ) : 'Loading...'}
       </main>
