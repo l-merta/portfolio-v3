@@ -437,6 +437,14 @@ main .about-me .links a:hover {
 .readme .file h2 {
   text-align: start;
 }
+.readme .file .error {
+  opacity: 0.7;
+  font: 400 1rem var(--font-1);
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  text-align: center;
+}
 
 .back-image {
   width: 100%;

@@ -462,6 +462,12 @@ main {
     h2 {
       text-align: start;
     }
+    .error {
+      opacity: 0.7;
+      font: 400 1.0rem var(--font-1);
+      width: fill;
+      text-align: center;
+    }
   }
 }
 

@@ -3,22 +3,30 @@ import ReactMarkdown from "react-markdown";
 
 const Readme = ({ repo }: { repo: string }) => {
   const [readme, setReadme] = useState<string | null>(null);
+  const [readmeError, setReadmeError] = useState<string | null>(null);
 
   useEffect(() => {
-      const fetchReadme = async () => {
-          const response = await fetch(`https://api.github.com/repos/l-merta/${repo}/readme`, {
-              headers: { Accept: "application/vnd.github.v3+json" }
-          });
-          const data = await response.json();
-          if (data.content) {
-              // Properly decode UTF-8 characters
-              const decodedContent = new TextDecoder("utf-8").decode(
-                  Uint8Array.from(atob(data.content), (c) => c.charCodeAt(0))
-              );
-              setReadme(decodedContent);
-          }
-      };
-      fetchReadme();
+    const fetchReadme = async () => {
+      try {
+        const response = await fetch(`https://api.github.com/repos/l-merta/${repo}/readme`, {
+          headers: { Accept: "application/vnd.github.v3+json" }
+        });
+        if (!response.ok) {
+          throw new Error('Failed to fetch README');
+        }
+        const data = await response.json();
+        if (data.content) {
+          // Properly decode UTF-8 characters
+          const decodedContent = new TextDecoder("utf-8").decode(
+            Uint8Array.from(atob(data.content), (c) => c.charCodeAt(0))
+          );
+          setReadme(decodedContent);
+        }
+      } catch (error) {
+        setReadmeError('Tento projekt nemá README soubor');
+      }
+    };
+    fetchReadme();
   }, [repo]);
 
   return (
@@ -28,7 +36,7 @@ const Readme = ({ repo }: { repo: string }) => {
         <span>README</span>
       </div>
       <div className="file">
-        {readme ? <ReactMarkdown>{readme}</ReactMarkdown> : <p>Loading...</p>}
+        {readme ? <ReactMarkdown>{readme}</ReactMarkdown> : <p className="error">{readmeError || 'Načítání...'}</p>}
       </div>
     </div>
   );
