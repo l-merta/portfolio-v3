@@ -109,6 +109,12 @@
   align-items: center;
   gap: 0.5rem;
 }
+.project-main .project-info .text .tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 main {
   width: calc(100% - var(--nav-main-width));
@@ -530,4 +536,38 @@ h2 {
 .tech-item-small .text .description {
   opacity: 0.7;
   font: 400 0.8rem var(--font-1);
+}
+
+.tech-item-medium {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tech-item-medium .img-cont {
+  aspect-ratio: 1/1;
+  height: 100%;
+  max-height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tech-item-medium .img-cont img {
+  height: 100%;
+}
+.tech-item-medium .text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.tech-item-medium .text .name {
+  font: 500 1.1rem var(--font-1);
+  margin-top: -0.6rem;
+}
+.tech-item-medium .text .description {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

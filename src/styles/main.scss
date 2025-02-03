@@ -114,6 +114,12 @@
         align-items: center;
         gap: 0.5rem;
       }
+      .tech {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
   }
 }
@@ -553,6 +559,41 @@ h2 {
     .description {
       opacity: 0.7;
       font: 400 0.8rem var(--font-1);
+    }
+  }
+}
+.tech-item-medium {
+  width: fit-content;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .img-cont {
+    aspect-ratio: 1/1;
+    height: 100%;
+    max-height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+    }
+  }
+  .text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    .name {
+      font: 500 1.1rem var(--font-1);
+      margin-top: -0.6rem;
+    }
+    .description {
+      display: none;
     }
   }
 }

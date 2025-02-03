@@ -3,10 +3,13 @@ import { useParams } from 'react-router-dom';
 
 import Navbar from './../components/Navbar';
 import NavbarLink from './../components/NavbarLink';
+import TechItemSmall from './../components/TechItemSmall';
 
 interface ProjectDataProps {
   name: string;
   file_name: string;
+  description: string;
+  description_short: string;
   link: string;
   tech: Array<String>;
   repo_name: string;
@@ -67,6 +70,12 @@ function ProjectPage() {
                   <NavbarLink to={'https://github.com/l-merta/' + projectData.repo_name} openBlank={true} iconType='brands' icon='github' active={true} main={true}>{'l-merta/' + projectData.repo_name}</NavbarLink>
                 }
               </div>
+              <div className="tech">
+                {projectData.tech.map((tech, index) => (
+                  <TechItemSmall dataSrc={'https://admin.mertalukas.cz/api/v1/tech/' + tech} sizeClass='medium' />
+                ))}
+              </div>
+              <p className='description'>{projectData.description}</p>
             </div>
           </div>
           </>

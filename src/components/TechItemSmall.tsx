@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 //import { Link } from 'react-router-dom';
 
 interface TechProps {
+  sizeClass?: string;
   dataSrc?: string;
   data?: TechDataProps;
   useText?: boolean;
@@ -15,7 +16,7 @@ interface TechDataProps {
   updated_at: string;
 }
 
-const ProjectItemSmall:React.FC<TechProps> = ({ dataSrc, data, useText = true }) => {
+const ProjectItemSmall:React.FC<TechProps> = ({ sizeClass = 'small', dataSrc, data, useText = true }) => {
   const [techData, setTechData] = useState<TechDataProps | null>(null);
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const ProjectItemSmall:React.FC<TechProps> = ({ dataSrc, data, useText = true })
 
   if (techData) {
     return (
-      <div className="tech-item-small">
+      <div className={"tech-item-" + sizeClass}>
         <div className="img-cont">
           <img src={'https://admin.mertalukas.cz/api/v1/tech/' + techData.file_name + '/images'} alt="Tech foto" />
         </div>
