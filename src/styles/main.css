@@ -407,6 +407,22 @@ main .about-me .links a:hover {
   justify-content: center;
 }
 
+.tech-stack {
+  width: 100%;
+  max-width: var(--max-width-2);
+}
+.tech-stack .tech-cont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tech-stack .tech-cont .tech-item-medium .name {
+  margin: 0;
+}
+
 .readme {
   width: 100%;
   max-width: var(--max-width);
