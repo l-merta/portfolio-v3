@@ -462,6 +462,82 @@ main .about-me .links a:hover {
   text-align: center;
 }
 
+.exp-section-cont {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  gap: 0.8rem;
+}
+.exp-section-cont .column {
+  flex: 1;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.exp-section-cont .exp {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid var(--bg-color-3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.exp-section-cont .exp .header {
+  background-color: var(--bg-color-2);
+  border-bottom: 1px solid var(--bg-color-3);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.exp-section-cont .exp .header i {
+  opacity: 0.7;
+}
+.exp-section-cont .exp .header h2 {
+  opacity: 0.7;
+  font: 500 1.2rem var(--font-1);
+  text-align: start;
+}
+.exp-section-cont .exp .body {
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.exp-section-cont .exp .body h3 {
+  opacity: 0.7;
+  font: 400 0.8rem var(--font-1);
+  margin: 0;
+}
+.exp-section-cont .exp .body p {
+  margin: 0;
+}
+.exp-section-cont .exp .body .error {
+  opacity: 0.7;
+  font: 300 0.8rem var(--font-1);
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  text-align: center;
+}
+.exp-section-cont .exp .body .item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.exp-section-cont .exp .body .item .desc {
+  opacity: 0.6;
+  font: 400 0.8rem var(--font-1);
+}
+.exp-section-cont .exp .body .item .time {
+  background-color: var(--bg-color-2);
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.5rem;
+}
+
 .back-image {
   width: 100%;
   max-width: var(--max-width);
@@ -628,4 +704,10 @@ h2 {
 }
 .tech-item-medium .text .description {
   display: none;
+}
+
+@media only screen and (max-width: 1030px) {
+  .exp-section-cont {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
