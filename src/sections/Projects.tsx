@@ -16,6 +16,12 @@ const ProjectsSmall = () => {
         <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/tda'/>
         <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/bakaweb'/>
       </div>
+      <h2>Školní projekty</h2>
+      <div className="projects-cont">
+        <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/design'/>
+        <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/css'/>
+        <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/krkonose'/>
+      </div>
     </section>
   )
 }
