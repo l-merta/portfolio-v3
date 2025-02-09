@@ -88,9 +88,11 @@
 }
 .project-main .project-info .icon-wrapper img {
   width: 14rem;
-  height: auto;
+  height: 14rem;
   border: 6px solid var(--bg-color-1);
   border-radius: 0.8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .project-main .project-info .text {
   padding-top: 0.5rem;

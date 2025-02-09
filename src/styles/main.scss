@@ -92,9 +92,10 @@
 
       img {
         width: 14rem;
-        height: auto;
+        height: 14rem;
         border: 6px solid var(--bg-color-1);
         border-radius: 0.8rem;
+        object-fit: cover;
       }
     }
     .text {
