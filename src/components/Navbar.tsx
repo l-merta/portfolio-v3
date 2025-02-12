@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="group">
         <span className="group-title">Social</span>
         <NavbarLink to='https://github.com/l-merta' openBlank={true} iconType='brands' icon='github'>GitHub</NavbarLink>
-        <NavbarLink to='/' icon='file-spreadsheet'>Životopis</NavbarLink>
+        {/* <NavbarLink to='/' icon='file-spreadsheet'>Životopis</NavbarLink> */}
       </div>
     </nav>
   )
