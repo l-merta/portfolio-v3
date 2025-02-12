@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Navbar from './../components/Navbar';
+import NavbarMobile from './../components/NavbarMobile';
 import NavbarLink from './../components/NavbarLink';
 import TechItemSmall from './../components/TechItemSmall';
 import Readme from './../components/Readme';
@@ -53,6 +54,7 @@ function ProjectPage() {
   return (
     <>
       <Navbar />
+      <NavbarMobile />
       <main className='project-main'>
         {projectData ? (
           <>

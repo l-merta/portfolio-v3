@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 
 import Navbar from './../components/Navbar';
+import NavbarMobile from './../components/NavbarMobile';
 import BackImage from './../sections/BackImage';
 import ExperienceSection from './../sections/Experience';
 
@@ -8,6 +9,7 @@ function Experience() {
   return (
     <>
     <Navbar />
+    <NavbarMobile />
     <main>
       <BackImage folder={1} title='Co mě naučila praxe' location='Zkušenosti' icon='briefcase'>
         <p>Každý projekt a každá výzva mě posouvají dál a rozšiřují mé schopnosti.</p>

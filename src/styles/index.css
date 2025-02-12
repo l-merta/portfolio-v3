@@ -11,6 +11,7 @@
   --max-width: 70rem;
   --max-width-2: 50rem;
   --nav-main-width: 15rem;
+  --nav-mobile-height: 5.0rem;
 }
 body {
   color: var(--font-color-1);

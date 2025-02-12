@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 
 import Navbar from './../components/Navbar';
+import NavbarMobile from './../components/NavbarMobile';
 import NavbarLink from './../components/NavbarLink';
 import BackImage from './../sections/BackImage';
 import Contributions from './../sections/Contributions';
@@ -11,6 +12,7 @@ function Home() {
   return (
     <>
     <Navbar />
+    <NavbarMobile />
     <main>
       <BackImage src='https://admin.mertalukas.cz/api/v1/images/gif/group-0/gif-3' location='Úvod' icon='compass'></BackImage>
       <section className='about-me'>

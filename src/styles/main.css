@@ -54,6 +54,31 @@
   width: 100%;
 }
 
+.nav-mobile {
+  background-color: var(--bg-color-2);
+  width: 100%;
+  height: var(--nav-mobile-height);
+  border-top: 1px solid var(--bg-color-3);
+  position: fixed;
+  bottom: 0;
+  display: none;
+  z-index: 100;
+}
+.nav-mobile .group {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-mobile .group .nav-link {
+  aspect-ratio: 1/1;
+  font-size: 1.6rem;
+}
+.nav-mobile .group .nav-link span {
+  display: none;
+}
+
 .project-main .background-wrapper {
   background-color: var(--bg-color-3);
   width: 100%;
@@ -721,9 +746,13 @@ h2 {
   .nav-main {
     display: none;
   }
+  .nav-mobile {
+    display: inline;
+  }
   main {
     width: 100%;
     margin: 0;
+    margin-bottom: var(--nav-mobile-height);
   }
 }
 @media only screen and (max-width: 600px) {
