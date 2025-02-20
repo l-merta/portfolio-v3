@@ -16,8 +16,8 @@ function Experience() {
       </BackImage>
       <div className="exp-section-cont">
         <div className="column">
-          <ExperienceSection name='Práce' icon='briefcase'>
-            <p className="error">Zatím nemám žádné pracovní zkušenosti</p>
+          <ExperienceSection name='Zaměstnání' icon='briefcase'>
+            <p className="error">Zatím nemám žádné zkušenosti ze zaměstnání</p>
           </ExperienceSection>
           <ExperienceSection name='Další zkušenosti' icon='sparkles'>
             <div className="item">
@@ -40,7 +40,7 @@ function Experience() {
             <h3>Střední škola</h3>
             <div className="item">
               <div className="name">
-                <p>SOŠ a SOU informatiky a spojů Kolín</p>
+                <p><a href="https://soskolin.cz" target='_blank'>SOŠ informatiky a spojů a SOU Kolín</a></p>
                 <p className="desc">Obor IT</p>
               </div>
               <p className='time'>2022 - současnost</p>

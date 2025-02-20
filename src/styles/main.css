@@ -540,6 +540,13 @@ main .about-me .links a:hover {
   font: 400 0.8rem var(--font-1);
   margin: 0;
 }
+.exp-section-cont .exp .body a {
+  color: var(--font-color-1);
+  text-decoration: none;
+}
+.exp-section-cont .exp .body a:hover {
+  text-decoration: underline;
+}
 .exp-section-cont .exp .body p {
   margin: 0;
 }

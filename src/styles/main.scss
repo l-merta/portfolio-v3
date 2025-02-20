@@ -566,6 +566,13 @@ main {
         font: 400 0.8rem var(--font-1);
         margin: 0;
       }
+      a {
+        color: var(--font-color-1);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
       p {
         margin: 0;
       }
