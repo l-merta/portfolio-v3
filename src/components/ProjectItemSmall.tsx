@@ -8,6 +8,8 @@ interface ProjectProps {
 interface ProjectDataProps {
   name: string;
   file_name: string;
+  description: string;
+  description_short: string;
   link: string;
   subdomain: string;
   port: number;
@@ -51,7 +53,7 @@ const ProjectItemSmall:React.FC<ProjectProps> = ({ dataSrc, data }) => {
       <Link to={'/projects/' + projectData.file_name} className='project-item-small'>
         <img src={'https://admin.mertalukas.cz/api/v1/websites/' + projectData.file_name + '/images'} alt="Project photo" />
         <span className="title">{projectData.name}</span>
-        <p className="description">Tohle je můj projekt, co sem dělal.</p>
+        <p className="description">{projectData.description_short}</p>
       </Link>
     )
   }
