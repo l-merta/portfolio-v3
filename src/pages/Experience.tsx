@@ -4,6 +4,7 @@ import Navbar from './../components/Navbar';
 import NavbarMobile from './../components/NavbarMobile';
 import BackImage from './../sections/BackImage';
 import ExperienceSection from './../sections/Experience';
+import TechItemSmall from './../components/TechItemSmall';
 
 function Experience() {
   return (
@@ -22,9 +23,49 @@ function Experience() {
           <ExperienceSection name='Další zkušenosti' icon='sparkles'>
             <div className="item">
               <div className="name">
+                <p>Vývoj her v Unity</p>
+                <p className="desc">Vývoj 2D a 3D her v Unity pomocí C#</p>
+                {/* <p className="tech">
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/csh' useText={false} />
+                </p> */}
+              </div>
+              <p className='time'>2020 - 2023</p>
+            </div>
+            <div className="item">
+              <div className="name">
+                {/* <p>3D modelování a grafika</p> */}
+                <p className="tech">
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/blender' sizeClass='medium' />
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/photoshop' sizeClass='medium' />
+                </p>
+              </div>
+              <p className='time'>2022</p>
+            </div>
+            {/* <div className="item">
+              <div className="name">
+                <p>Tvorba webových stránek</p>
+                <p className="tech">
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/html' useText={false} />
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/css' useText={false} />
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/js' useText={false} />
+                </p>
+              </div>
+              <p className='time'>2023</p>
+            </div> */}
+            {/* <div className="item">
+              <div className="name">
+                <p className="tech">
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/react' sizeClass='medium' />
+                  <TechItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/tech/docker' sizeClass='medium' />
+                </p>
+              </div>
+              <p className='time'>2024</p>
+            </div> */}
+            <div className="item">
+              <div className="name">
                 <p>Správa vlastního webového serveru</p>
               </div>
-              <p className='time'>2024 - současnost</p>
+              <p className='time'>2024</p>
             </div>
             <div className="item">
               <div className="name">

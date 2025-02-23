@@ -43,7 +43,7 @@ const ProjectItemSmall:React.FC<TechProps> = ({ sizeClass = 'small', dataSrc, da
 
   if (techData) {
     return (
-      <div className={"tech-item-" + sizeClass}>
+      <div className={"tech-item tech-item-" + sizeClass}>
         <div className="img-cont">
           <img src={'https://admin.mertalukas.cz/api/v1/tech/' + techData.file_name + '/images'} alt="Tech foto" />
         </div>
