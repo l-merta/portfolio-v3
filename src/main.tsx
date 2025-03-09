@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import StaticFileHandler from './StaticFileHandler';
+import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectPage from './pages/ProjectPage';
@@ -22,8 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/tech' element={<Tech />} />
         <Route path='/blog' element={<Home />} />
         <Route path='/experience' element={<Experience />} />
-        {/* Catch-all route to handle static files */}
-        <Route path='*' element={<StaticFileHandler />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
   </StrictMode>,
