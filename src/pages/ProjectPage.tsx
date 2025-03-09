@@ -31,19 +31,30 @@ function ProjectPage() {
   const { file_name } = useParams();
 
   const [projectData, setProjectData] = useState<ProjectDataProps>();
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(`https://admin.mertalukas.cz/api/v1/websites/${file_name}`);
         const projectData = await response.json();
+        if (!response.ok) {
+          if (response.status === 404) {
+            setError('Projekt ' + file_name + ' nebyl nalezen');
+          } else {
+            setError('Nepodařilo se získat data o projektu ' + file_name);
+          }
+          return;
+        }
         if (projectData.success) {
           setProjectData(projectData.data);
         } else {
           // Handle the case where success is false
+          setError('Nepodařilo se získat data o projektu ' + file_name);
           console.error('Failed to fetch project data');
         }
       } catch (error) {
+        setError('Nepodařilo se získat data o projektu ' + file_name);
         console.error('Error fetching project data:', error);
       }
     };
@@ -51,6 +62,17 @@ function ProjectPage() {
     fetchData();
   }, [file_name]);
 
+  if (error) {
+    return (
+      <>
+        <Navbar />
+        <NavbarMobile />
+        <main className='error-main'>
+          <h1 style={{fontSize: '2.0rem'}}>{error}</h1>
+        </main>
+      </>
+    );
+  }
   return (
     <>
       <Navbar />
@@ -83,7 +105,7 @@ function ProjectPage() {
           </div>
           <Readme repo={projectData.repo_name} />
           </>
-        ) : 'Loading...'}
+        ) : 'Hledám projekt ' + file_name}
       </main>
     </>
   );
