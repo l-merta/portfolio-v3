@@ -1,14 +1,18 @@
 //import React from 'react';
 
+import Navbar from './../components/Navbar';
+import NavbarMobile from './../components/NavbarMobile';
+
 const NotFound = () => {
   return (
-    <div>
-      <h1>404 - Not Found</h1>
-      <p>The page you are looking for does not exist.</p>
-      <p>
-        <a href="/">Go to Home</a>
-      </p>
-    </div>
+    <>
+      <Navbar />
+      <NavbarMobile />
+      <main className='error-main'>
+        <h1>404</h1>
+        <h2>Stránka nebyla nalezena</h2>
+      </main>
+    </>
   );
 };
 

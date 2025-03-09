@@ -147,6 +147,22 @@
   max-width: 40rem;
 }
 
+.error-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.error-main h1 {
+  font: 700 5rem var(--font-1);
+  margin: 0 !important;
+}
+.error-main h2 {
+  font: 400 1.2rem var(--font-1);
+  margin: 0 !important;
+}
+
 main {
   width: calc(100% - var(--nav-main-width));
   margin-left: var(--nav-main-width);

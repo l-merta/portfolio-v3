@@ -67,8 +67,8 @@ function ProjectPage() {
       <>
         <Navbar />
         <NavbarMobile />
-        <main className='project-main'>
-          <h1>{error}</h1>
+        <main className='error-main'>
+          <h1 style={{fontSize: '2.0rem'}}>{error}</h1>
         </main>
       </>
     );
@@ -105,7 +105,7 @@ function ProjectPage() {
           </div>
           <Readme repo={projectData.repo_name} />
           </>
-        ) : 'Hledám projekt ' + file_name + '...'}
+        ) : 'Hledám projekt ' + file_name}
       </main>
     </>
   );
