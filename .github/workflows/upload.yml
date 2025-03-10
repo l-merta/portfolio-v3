@@ -45,6 +45,8 @@ jobs:
         " >> ~/.ssh/config
 
     - name: Clean up the main folder, preserving vlastni and skola
+      env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
       run: |
         sshpass -e ssh -o StrictHostKeyChecking=no root@mertalukas << 'EOF'
           find /var/www/html/public/main/ -mindepth 1 ! -path '/var/www/html/public/main/vlastni' ! -path '/var/www/html/public/main/skola' -exec rm -rf {} +
