@@ -137,6 +137,15 @@
   align-items: center;
   gap: 0.5rem;
 }
+.project-main .project-info .text .s1 .nav-link span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.project-main .project-info .text .s1 .nav-link span img {
+  height: 1.15rem;
+  border-radius: 0.15rem;
+}
 .project-main .project-info .text .tech {
   display: flex;
   flex-wrap: wrap;

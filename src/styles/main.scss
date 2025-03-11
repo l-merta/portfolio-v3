@@ -142,6 +142,17 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 0.5rem;
+
+        .nav-link span{
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          img {
+            height: 1.15rem;
+            border-radius: 0.15rem;
+          }
+        }
       }
       .tech {
         display: flex;

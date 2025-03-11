@@ -32,6 +32,7 @@ function ProjectPage() {
 
   const [projectData, setProjectData] = useState<ProjectDataProps>();
   const [error, setError] = useState<string | null>(null);
+  const [favicon, setFavicon] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,14 +49,31 @@ function ProjectPage() {
         }
         if (projectData.success) {
           setProjectData(projectData.data);
+          fetchFavicon(projectData.data.link);
         } else {
-          // Handle the case where success is false
           setError('Nepodařilo se získat data o projektu ' + file_name);
           console.error('Failed to fetch project data');
         }
       } catch (error) {
         setError('Nepodařilo se získat data o projektu ' + file_name);
         console.error('Error fetching project data:', error);
+      }
+    };
+
+    const fetchFavicon = async (link: string) => {
+      try {
+        const response = await fetch(link);
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const iconLink = doc.querySelector("link[rel~='icon']") as HTMLLinkElement;
+        if (iconLink) {
+          setFavicon(iconLink.href);
+        } else {
+          setFavicon(`https://www.google.com/s2/favicons?domain=${new URL(link).hostname}`);
+        }
+      } catch (error) {
+        console.error('Error fetching favicon:', error);
       }
     };
 
@@ -90,7 +108,10 @@ function ProjectPage() {
             <div className="text">
               <h1>{projectData.name}</h1>
               <div className="s1">
-                <NavbarLink to={projectData.link} openBlank={true} active={true}>{projectData.link}</NavbarLink>
+                <NavbarLink to={projectData.link} openBlank={true} active={true}>
+                  {favicon && <img src={'https://unsplash.it/512/512'} alt="Favicon" />}
+                  <span>{projectData.link}</span>
+                </NavbarLink>
                 {projectData.repo_name && 
                   <NavbarLink to={'https://github.com/l-merta/' + projectData.repo_name} openBlank={true} iconType='brands' icon='github' active={true} main={true}>{'l-merta/' + projectData.repo_name}</NavbarLink>
                 }
