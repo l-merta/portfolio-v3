@@ -68,7 +68,9 @@ function ProjectPage() {
         const doc = parser.parseFromString(html, 'text/html');
         const iconLink = doc.querySelector("link[rel~='icon']") as HTMLLinkElement;
         if (iconLink) {
-          setFavicon(iconLink.href);
+          const faviconUrl = new URL(iconLink.getAttribute('href')!, link).href;
+          console.log(faviconUrl);
+          setFavicon(faviconUrl);
         } else {
           setFavicon(`https://www.google.com/s2/favicons?domain=${new URL(link).hostname}`);
         }
@@ -109,7 +111,7 @@ function ProjectPage() {
               <h1>{projectData.name}</h1>
               <div className="s1">
                 <NavbarLink to={projectData.link} openBlank={true} active={true}>
-                  {favicon && <img src={'https://unsplash.it/512/512'} alt="Favicon" />}
+                  {favicon && <img src={favicon} alt="Favicon" />}
                   <span>{projectData.link}</span>
                 </NavbarLink>
                 {projectData.repo_name && 
