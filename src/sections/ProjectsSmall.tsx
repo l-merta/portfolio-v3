@@ -12,7 +12,7 @@ const ProjectsSmall = () => {
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/filmino'/>
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/kahoot'/>
         <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/tda'/>
-        <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/bakaweb'/>
+        <ProjectItemSmall dataSrc='https://admin.mertalukas.cz/api/v1/websites/academy'/>
       </div>
       <div className="links">
         <NavbarLink to='projects' icon='project-diagram' active={true} main={true}>Všechny projekty</NavbarLink>
