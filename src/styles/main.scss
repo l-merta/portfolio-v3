@@ -645,6 +645,18 @@ main {
           border-radius: 0.4rem;
           padding: 0.2rem 0.5rem;
         }
+
+        &.item-work {
+          .name {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            img {
+              height: 3.0rem;
+            }
+          }
+        }
       }
     }
   }

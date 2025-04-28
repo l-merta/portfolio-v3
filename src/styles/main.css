@@ -618,6 +618,14 @@ main .about-me .links a:hover {
   border-radius: 0.4rem;
   padding: 0.2rem 0.5rem;
 }
+.exp-section-cont .exp .body .item.item-work .name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.exp-section-cont .exp .body .item.item-work .name img {
+  height: 3rem;
+}
 
 .back-image {
   width: 100%;

@@ -18,7 +18,27 @@ function Experience() {
       <div className="exp-section-cont">
         <div className="column">
           <ExperienceSection name='Zaměstnání' icon='briefcase'>
-            <p className="error">Zatím nemám žádné zkušenosti ze zaměstnání</p>
+            {/* <p className="error">Zatím nemám žádné zkušenosti ze zaměstnání</p> */}
+            {/* <div className="item item-work">
+              <div className="name">
+                <img src="/images/work/cez.png" alt="" />
+                <div className="text">
+                  <p>ČEZ Distrubuce</p>
+                  <p className="desc">Praxe, frontend programátor</p>
+                </div>
+              </div>
+              <p className='time'>2025</p>
+            </div> */}
+            <div className="item item-work">
+              <div className="name">
+                <img src="/images/work/smart-shark-ploutev-bile.png" alt="" />
+                <div className="text">
+                  <p>SmartShark Tech</p>
+                  <p className="desc">Hlavní programátor</p>
+                </div>
+              </div>
+              <p className='time'>2025</p>
+            </div>
           </ExperienceSection>
           <ExperienceSection name='Další zkušenosti' icon='sparkles'>
             <div className="item">
