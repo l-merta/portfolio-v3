@@ -11,6 +11,7 @@ const ProjectsSmall = () => {
         <p className='section-description'>Své weby hostuji na vlastním domácím serveru s automatizovaným nasazením přes GitHub. Server spravuji sám, běží na něm databáze, subdomény a kontejnerizované aplikace, dostupné přes Cloudflare Tunnel. Každý projekt je pro mě výzvou k dalšímu zlepšení.</p>
       </div>
       <div className="projects-cont">
+        <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/museum'/>
         <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/filmino'/>
         <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/kahoot'/>
         <ProjectItem dataSrc='https://admin.mertalukas.cz/api/v1/websites/tda'/>

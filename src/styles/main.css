@@ -510,6 +510,14 @@ main .about-me .links a:hover {
 .readme .file h2 {
   text-align: start;
 }
+.readme .file a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+.readme .file a:hover {
+  text-decoration: underline;
+}
 .readme .file .error {
   opacity: 0.7;
   font: 400 1rem var(--font-1);
