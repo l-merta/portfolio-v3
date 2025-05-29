@@ -19,16 +19,16 @@ function Experience() {
         <div className="column">
           <ExperienceSection name='Zaměstnání' icon='briefcase'>
             {/* <p className="error">Zatím nemám žádné zkušenosti ze zaměstnání</p> */}
-            {/* <div className="item item-work">
+            <div className="item item-work">
               <div className="name">
                 <img src="/images/work/cez.png" alt="" />
                 <div className="text">
-                  <p>ČEZ Distrubuce</p>
+                  <p>ČEZ D2</p>
                   <p className="desc">Praxe, frontend programátor</p>
                 </div>
               </div>
               <p className='time'>2025</p>
-            </div> */}
+            </div>
             <div className="item item-work">
               <div className="name">
                 <img src="/images/work/smart-shark-ploutev-bile.png" alt="" />
