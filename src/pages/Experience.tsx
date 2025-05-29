@@ -91,6 +91,7 @@ function Experience() {
               <div className="name">
                 <p>Tour de App</p>
                 <p className="desc">Soutěž ve tvorbě webové aplikace</p>
+                <p className="desc">2. místo ze 160 týmů</p>
               </div>
               <p className='time'>2025</p>
             </div>
