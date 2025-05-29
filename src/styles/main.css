@@ -286,6 +286,9 @@ main .about-me .links a:hover {
 .section .links a:hover {
   scale: 0.95;
 }
+.section.section-wide {
+  max-width: var(--max-width-3);
+}
 
 .projects-small .projects-cont {
   display: flex;
@@ -635,6 +638,55 @@ main .about-me .links a:hover {
   height: 3rem;
 }
 
+.ref-section-cont {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+}
+.ref-section-cont .column {
+  max-width: 50% !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.ref-section-cont .column .ref-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ref-section-cont .column .ref-item .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.ref-section-cont .column .ref-item .text p {
+  font: 400 0.9rem var(--font-1);
+  margin: 0;
+}
+.ref-section-cont .column .ref-item .author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ref-section-cont .column .ref-item .author img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ref-section-cont .column .ref-item .author .name {
+  font: 500 1rem var(--font-1);
+  display: flex;
+  align-items: end;
+  gap: 0.6rem;
+}
+.ref-section-cont .column .ref-item .author .name .desc {
+  opacity: 0.7;
+  font: 400 0.9em var(--font-1);
+}
+
 .back-image {
   width: 100%;
   max-width: var(--max-width);
@@ -804,6 +856,14 @@ h2 {
   display: none;
 }
 
+@media only screen and (max-width: 1300px) {
+  .ref-section-cont {
+    flex-direction: column;
+  }
+  .ref-section-cont .column {
+    max-width: 100% !important;
+  }
+}
 @media only screen and (max-width: 1030px) {
   .exp-section-cont {
     flex-direction: column;

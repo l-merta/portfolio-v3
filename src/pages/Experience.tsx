@@ -109,6 +109,28 @@ function Experience() {
           </ExperienceSection>
         </div>
       </div>
+      <div className="section section-wide">
+        <h2>Reference</h2>
+        <div className="ref-section-cont">
+          <div className="column">
+            <div className="ref-item">
+              <div className='text'>
+                <p>Lukášův přístup k práci je příkladný — je velmi pracovitý, cílevědomý a vždy ochotný přispět vlastní iniciativou. Oceňujeme zejména jeho schopnost otevřeně komunikovat své názory a přinášet konstruktivní návrhy, které posunuly náš projekt směrem k inovativnějším a efektivnějším řešením.</p>
+                <p>Během naší spolupráce přinesl do projektu řadu nových nápadů, které se pozitivně promítly do výsledné podoby platformy. Jeho technické znalosti, kombinované s kreativním přístupem, byly pro náš tým velkým přínosem. Zároveň oceňujeme jeho přirozenou chuť učit se nové věci a schopnost rychle se adaptovat na nové technologie a postupy, což výrazně přispělo k celkovému rozvoji projektu.</p>
+                <p>Jeho pracovní nasazení, spolehlivost a chuť neustále se zlepšovat z něj činí cenného člena jakéhokoliv týmu. Věřím, že i v budoucích projektech bude přinášet stejně vysokou úroveň profesionality a přidané hodnoty.</p>
+              </div>
+              <div className='author'>
+                <img src="/images/work/smart-shark-ploutev-bile.png" alt="" />
+                <div className="name">
+                  <span>Jan Plachý</span>
+                  <span className="desc">CEO SmartShark Tech</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="column"></div>
+        </div>
+      </div>
     </main>
     </>
   )
