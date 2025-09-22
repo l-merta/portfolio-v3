@@ -39,4 +39,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.DEPLOY_SSH_KEY }}
       run: |
-        sshpass -e scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r dist/* root@mertalukas:/www/public/root/
+        sshpass -e scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r dist/* deploy@mertalukas.cz:/www/public/root/
