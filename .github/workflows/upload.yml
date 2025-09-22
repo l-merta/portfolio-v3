@@ -36,7 +36,6 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
 
     - name: Deploy
-      env:
-        SSHPASS: ${{ secrets.DEPLOY_SSH_KEY }}
       run: |
-        sshpass -e scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -r dist/* deploy@mertalukas.cz:/www/public/root/
+        rsync -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" -az --delete \
+          --rsync-path="sudo rsync" dist/ deploy@mertalukas.cz:/www/public/root/
